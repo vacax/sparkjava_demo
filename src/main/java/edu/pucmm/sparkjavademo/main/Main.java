@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("La IP: "+request.ip());
                 System.out.println("La puerto: "+request.port());
                 System.out.println("Protocolo del HTPP: "+request.protocol());
-                System.out.println("Metodo del HTPP: "+request.requestMethod());
+                System.out.println("Metodo del HTTP: "+request.requestMethod());
                 System.out.println("Los headers: ");
 
                 for(String header : request.headers()){

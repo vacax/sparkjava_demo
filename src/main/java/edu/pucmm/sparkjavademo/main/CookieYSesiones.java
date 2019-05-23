@@ -43,6 +43,16 @@ public class CookieYSesiones {
             return "Cookie creado con exito...";
         });
 
+        get("/saludos", (request, response) -> {
+            String saludo = "Hola ";
+            if(request.cookie("saludo")!=null){
+                saludo+=" "+request.cookie("saludo");
+            }else{
+                saludo+=" Anonimo";
+            }
+            return saludo;
+        });
+
         /**
          * Registra elementos en el ambito web de sesion.
          * http://localhost:4567/contadorSesion/
