@@ -35,9 +35,10 @@ public class Filtros {
 
             if(request.queryParams("pararFiltro")!=null){
                 System.out.println("Parando la ejecución del filtro...");
-                halt(); //
+                halt(501, "Parada del proceso"); //
             }
 
+            //si paro el filtro, no se ejecuta, la creación del header.
             response.header("profesor", "Carlos Camacho");
         });
 
@@ -51,6 +52,7 @@ public class Filtros {
                 response.header("profesor", "Carlos Camacho");
                 response.header("ejecutado", "bloque afterAfter");
             }
+
         });
 
         /**

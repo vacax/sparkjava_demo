@@ -34,7 +34,10 @@ public class Main {
         /**
          * Hola mundo utilizando  SparkJava
          */
-        get("/", (request, response) -> "Proyecto Demostración Funcionalidades SparkJava");
+        get("/", (request, response) -> {
+            System.out.println("Entranod al action de la /");
+           return  "Proyecto Demostración Funcionalidades SparkJava";
+        });
 
         /**
          *
