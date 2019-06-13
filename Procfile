@@ -1,1 +1,1 @@
-web: sh build/install/sparkjava_demo/bin/sparjava_demo
+web: sh build/install/sparkjava_demo/bin/sparkjava_demo
