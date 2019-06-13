@@ -1,0 +1,1 @@
+web: sh build/install/sparkjava_demo/bin/sparjava_demo

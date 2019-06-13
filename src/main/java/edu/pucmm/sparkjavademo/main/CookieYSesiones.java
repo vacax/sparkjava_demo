@@ -101,6 +101,7 @@ public class CookieYSesiones {
             }
 
             session.attribute("usuario", usuario);
+            //redireccionado a la otra URL.
             response.redirect("/zonaadmin/?param1=adasdasd");
 
             return "";
