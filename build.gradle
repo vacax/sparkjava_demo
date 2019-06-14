@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
 }
 
 group 'edu.pucmm'
@@ -31,6 +32,26 @@ dependencies {
     compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
 }
 
-task stage {
+shadowJar {
+    baseName = 'spark_demo'
+    classifier = null
+    version = null
+}
+
+/**
+ * tarea necesaria para heroku si optamos por la tarea de InstallDisy
+ * en el archivo Procfile debe estar el siguiente comando:
+ * web: sh build/install/sparkjava_demo/bin/sparkjava_demo
+ */
+/*task stage {
     dependsOn installDist
+}*/
+
+/**
+ * tarea necesaria para heroku si optamos por la tarea de InstallDisy
+ * en el archivo Procfile debe estar el siguiente comando:
+ * web: sh build/install/sparkjava_demo/bin/sparkjava_demo
+ */
+task stage {
+    dependsOn shadowJar
 }

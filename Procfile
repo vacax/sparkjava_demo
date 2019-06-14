@@ -1,1 +1,1 @@
-web: sh build/install/sparkjava_demo/bin/sparkjava_demo
+web: java -jar build/libs/sparkjava_demo.jar
