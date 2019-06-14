@@ -33,7 +33,7 @@ dependencies {
 }
 
 shadowJar {
-    baseName = 'spark_demo'
+    baseName = 'sparkjava_demo'
     classifier = null
     version = null
 }
