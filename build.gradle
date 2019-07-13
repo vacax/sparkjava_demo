@@ -39,7 +39,7 @@ shadowJar {
 }
 
 /**
- * tarea necesaria para heroku si optamos por la tarea de InstallDisy
+ * tarea necesaria para heroku si optamos por la tarea de InstallDist
  * en el archivo Procfile debe estar el siguiente comando:
  * web: sh build/install/sparkjava_demo/bin/sparkjava_demo
  */
@@ -48,9 +48,9 @@ shadowJar {
 }*/
 
 /**
- * tarea necesaria para heroku si optamos por la tarea de InstallDisy
+ * tarea necesaria para heroku si optamos por la tarea de Shadowjar
  * en el archivo Procfile debe estar el siguiente comando:
- * web: sh build/install/sparkjava_demo/bin/sparkjava_demo
+ * web: java -jar build/libs/sparkjava_demo.jar
  */
 task stage {
     dependsOn shadowJar
