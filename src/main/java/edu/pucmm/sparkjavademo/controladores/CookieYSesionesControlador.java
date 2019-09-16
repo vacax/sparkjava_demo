@@ -1,4 +1,4 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 import edu.pucmm.sparkjavademo.encapsulacion.Usuario;
 import spark.Session;
@@ -10,7 +10,7 @@ import static spark.Spark.*;
 /**
  * Manejo de Cookies y Sesiones usando Spark.
  */
-public class CookieYSesiones {
+public class CookieYSesionesControlador {
 
     /**
      *

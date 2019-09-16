@@ -1,15 +1,15 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 import com.google.gson.Gson;
 import edu.pucmm.sparkjavademo.encapsulacion.Estudiante;
-import edu.pucmm.sparkjavademo.transformaciones.JsonTransformer;
+import edu.pucmm.sparkjavademo.utilidades.JsonTransformer;
 
 import static spark.Spark.*;
 
 /**
- * Created by vacax on 23/04/16.
+ * 
  */
-public class ManejoTransformaciones {
+public class TransformacionesControlador {
 
     public void ejemploTransformaciones(){
 

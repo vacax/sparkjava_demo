@@ -1,14 +1,14 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 import edu.pucmm.sparkjavademo.encapsulacion.Estudiante;
-import edu.pucmm.sparkjavademo.servicios.FakeServices;
+import edu.pucmm.sparkjavademo.servicios.FakeService;
 
 import static spark.Spark.*;
 
 /**
  * Ejemplos de uso de rutas.
  */
-public class ManejoRutas {
+public class RutasControlador {
 
     /**
      *
@@ -49,7 +49,7 @@ public class ManejoRutas {
         get("/rutas/:matricula", (request, response)->{
             int matricula=Integer.parseInt(request.params("matricula"));
             //Consulta Fake a la base de datos...
-            Estudiante estudiante = FakeServices.getInstancia().getEstudianteMatricula(matricula);
+            Estudiante estudiante = FakeService.getInstancia().getEstudianteMatricula(matricula);
             //Estudiante estudiante =new Estudiante(matricula, "Estudiante "+matricula, "ISC");
 
             return estudiante;
@@ -61,7 +61,7 @@ public class ManejoRutas {
         get("/rutas/:matricula/:cedula/:telefono", (request, response)->{
             int matricula=Integer.parseInt(request.params("matricula"));
             //Consulta Fake a la base de datos...
-            Estudiante estudiante = FakeServices.getInstancia().getEstudianteMatricula(matricula);
+            Estudiante estudiante = FakeService.getInstancia().getEstudianteMatricula(matricula);
             //Estudiante estudiante =new Estudiante(matricula, "Estudiante "+matricula, "ISC");
 
             String cedula =  request.params("cedula");
@@ -89,8 +89,8 @@ public class ManejoRutas {
             String matriculaDestino = comodines[1];
 
             //Omitiendo validaciones....
-            Estudiante origen= FakeServices.getInstancia().getEstudianteMatricula(Integer.parseInt(request.params("matricula")));
-            Estudiante destino = FakeServices.getInstancia().getEstudianteMatricula(Integer.parseInt(matriculaDestino));
+            Estudiante origen= FakeService.getInstancia().getEstudianteMatricula(Integer.parseInt(request.params("matricula")));
+            Estudiante destino = FakeService.getInstancia().getEstudianteMatricula(Integer.parseInt(matriculaDestino));
 
             return String.format("Monto Transferido: $%s, del Estudiante %s al %s, realizado con éxito", montoOrigen, origen.getNombre(), destino.getNombre());
         });

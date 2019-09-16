@@ -1,8 +1,7 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 import edu.pucmm.sparkjavademo.encapsulacion.Estudiante;
 import edu.pucmm.sparkjavademo.encapsulacion.Usuario;
-import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
@@ -18,11 +17,21 @@ import static spark.Spark.*;
 /**
  * Permite trabajar con los templates
  */
-public class ManejoTemplates {
+public class TemplatesControlador {
 
     // Declaración para simplificar el uso del motor de template Thymeleaf.
     public static String renderThymeleaf(Map<String, Object> model, String templatePath) {
         return new ThymeleafTemplateEngine().render(new ModelAndView(model, templatePath));
+    }
+
+    /**
+     * 
+     * @param model
+     * @param templatePath
+     * @return
+     */
+    public static String renderFreemarker(Map<String, Object> model, String templatePath) {
+        return new FreeMarkerEngine().render(new ModelAndView(model, templatePath));
     }
 
     public void manejoTemplate(){
@@ -31,15 +40,14 @@ public class ManejoTemplates {
     }
 
     /**
-     * FreeMarker utiliza por defecto la carpeta: spark/template/freemarker dentro del resources
-     * En el ejemplo se cambia con fines de demostración.
+     * FreeMarker utiliza por defecto la carpeta: spark/template/freemarker dentro del resources     *
      */
     public void ejemplosTemplatesFreeMarker(){
 
-        //Indicando la carpeta por defecto que estaremos usando.
-        Configuration configuration=new Configuration(Configuration.VERSION_2_3_23);
-        configuration.setClassForTemplateLoading(ManejoTemplates.class, "/templates");
-        FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine(configuration);
+        //Indicando la carpeta por defecto que estaremos usando si queremos cambiar la opción.
+        /*Configuration configuration=new Configuration(Configuration.VERSION_2_3_23);
+        configuration.setClassForTemplateLoading(TemplatesControlador.class, "/templates");
+        FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine(configuration);*/
 
         /**
          * Formulario sencillo en
@@ -48,8 +56,8 @@ public class ManejoTemplates {
         get("/formulario/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("titulo", "Formulario en FreeMarker");
-            return new ModelAndView(attributes, "formulario.ftl");
-        }, freeMarkerEngine);
+            return renderFreemarker(attributes, "formulario.ftl");
+        });
 
         /**
          * http://localhost:4567/datosEstudiante/20011136
@@ -62,8 +70,8 @@ public class ManejoTemplates {
             attributes.put("estudiante", estudiante);
 
             //enviando los parametros a la vista.
-            return new ModelAndView(attributes, "datosEstudiante.ftl");
-        }, freeMarkerEngine); //
+            return renderFreemarker(attributes, "datosEstudiante.ftl");
+        }); //
 
 
         post("/procesarFormulario/", (request, response) -> {
@@ -82,25 +90,25 @@ public class ManejoTemplates {
             attributes.put("estudiante", estudiante);
 
             //enviando los parametros a la vista.
-            return new ModelAndView(attributes, "formularioProcesado.ftl");
-        }, freeMarkerEngine); //
+            return renderFreemarker(attributes, "formularioProcesado.ftl");
+        }); //
 
         /**
          * http://localhost:4567/funcionalidadFreemarker
          */
         get("/funcionalidadFreemarker", (request, response) -> {
 
-                    List<Estudiante> listaEstudiante = new ArrayList<>();
-                    listaEstudiante.add(new Estudiante(20011136, "Carlos Camacho", "ITT"));
-                    listaEstudiante.add(new Estudiante(20011137, "Otro Estudiante", "ISC"));
+            List<Estudiante> listaEstudiante = new ArrayList<>();
+            listaEstudiante.add(new Estudiante(20011136, "Carlos Camacho", "ITT"));
+            listaEstudiante.add(new Estudiante(20011137, "Otro Estudiante", "ISC"));
 
-                    Map<String, Object> attributes = new HashMap<>();
-                    attributes.put("titulo", "Ejemplo de funcionalidad");
-                    attributes.put("listaEstudiante", listaEstudiante);
-                    attributes.put("usuario", new Usuario("camacho", "1234"));
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("titulo", "Ejemplo de funcionalidad");
+            attributes.put("listaEstudiante", listaEstudiante);
+            attributes.put("usuario", new Usuario("camacho", "1234"));
 
-                    return new ModelAndView(attributes, "/funcionalidad.ftl");},
-                freeMarkerEngine);
+            return renderFreemarker(attributes, "/funcionalidad.ftl");
+        });
 
     }
 

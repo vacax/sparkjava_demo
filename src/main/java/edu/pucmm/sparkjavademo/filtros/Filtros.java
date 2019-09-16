@@ -1,4 +1,4 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.filtros;
 
 import edu.pucmm.sparkjavademo.encapsulacion.Usuario;
 

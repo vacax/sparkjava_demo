@@ -1,10 +1,10 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 /**
  * Representa la ruta para el manejo de descargas y subidas de
  * archivos.
  */
-public class ManejoDescarga {
+public class DescargaControlador {
 
     public void rutas(){
         

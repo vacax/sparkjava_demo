@@ -7,16 +7,16 @@ import edu.pucmm.sparkjavademo.encapsulacion.Usuario;
 /**
  * Prepresenta un servicio...
  */
-public class FakeServices {
+public class FakeService {
 
-    private static FakeServices fakeServices;
+    private static FakeService fakeServices;
 
-    private FakeServices() {
+    private FakeService() {
     }
 
-    public static FakeServices getInstancia(){
+    public static FakeService getInstancia(){
         if(fakeServices==null){
-           fakeServices=new FakeServices();
+           fakeServices=new FakeService();
         }
         return fakeServices;
     }

@@ -1,4 +1,4 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.utilidades;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

@@ -1,11 +1,11 @@
-package edu.pucmm.sparkjavademo.main;
+package edu.pucmm.sparkjavademo.controladores;
 
 import static spark.Spark.*;
 
 /**
  * Presentando la forma de manejar las excepciones...
  */
-public class ManejoExcepciones {
+public class ExcepcionesControlador {
 
     /**
      * Permite capturar un error del tipo de conversion.     *
