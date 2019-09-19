@@ -76,7 +76,7 @@ public class Main {
         new TransformacionesControlador().ejemploTransformaciones();
 
         //
-        new DescargaControlador().rutas();
+        new DescargaControlador().aplicarRutas();
     }
 
     /**

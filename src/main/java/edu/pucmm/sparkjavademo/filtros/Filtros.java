@@ -57,6 +57,7 @@ public class Filtros {
 
         /**
          * Se ejecuta antes de un request. Podemos modificar las llamada.
+         * 
          */
         before("/zonaadmin/*",(request, response) -> {
             Usuario usuario=request.session(true).attribute("usuario");

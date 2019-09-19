@@ -139,7 +139,7 @@ public class HolaMundo {
                                     </p>
 
                                 </div><!--//section-block-->
-                                <div id="html" class="section-block">
+                                <div id="datos" class="section-block">
                                     <div class="code-block">
                                         <h6>Recibidor Datos</h6>
                                         <p>
@@ -152,105 +152,101 @@ public class HolaMundo {
 
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
-                                <div id="css" class="section-block">
+                                <div id="cookies" class="section-block">
                                     <div class="code-block">
-                                        <h6>CSS Code Example</h6>
-                                        <pre><code class="language-css">/* ======= Base Styling ======= */
-body {
-    font-family: 'Open Sans', arial, sans-serif; 
-    color: #333; 
-    font-size: 16px; 
-    -webkit-font-smoothing: antialiased; 
-    -moz-osx-font-smoothing: grayscale; 
-}</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="sass" class="section-block">
-                                    <div class="code-block">
-                                        <h6>SCSS Code Example</h6>
-                                        <pre><code class="language-css">@mixin transform($property) {
-  -webkit-transform: $property;
-      -ms-transform: $property;
-          transform: $property;
-}
+                                        <h6>Cookies</h6>
+                                        <p>
+                                            Permite enviar información al cliente desde el servidor para
+                                        mantener una trazabilidad.
+                                        <ul>
+                                            <li>Crear Cookies -> <a target="_blank" href="http://localhost:4567/crearCookie/barcamp/2019">http://localhost:4567/crearCookie/barcamp/2014</a></li>
+                                            <li>Listar Cookies -> <a target="_blank" href="http://localhost:4567/listarCookies/">http://localhost:4567/listarCookies/</a></li>
+                                        </ul>
+                                        </p>
 
-.box { @include transform(rotate(30deg)); }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
-                                <div id="less" class="section-block">
+                                <div id="sesiones" class="section-block">
                                     <div class="code-block">
-                                        <h6>LESS Code Example</h6>
-                                        <pre><code class="language-css">@base: #f04615;
-@width: 0.5;
+                                        <h6>Sesiones</h6>
+                                        <p>
+                                            Utilizan las cookies para mantener desde el lado del servidor un repositorio para almacenar
+                                        la información asociada de un cliente.
+                                        <ul>
+                                            <li>Ejemplo de sesiones -> <a target="_blank" href="http://localhost:4567/contadorSesion/">http://localhost:4567/contadorSesion/</a></li>
+                                            <li>Invalidar Sesiones -> <a target="_blank" href="http://localhost:4567/invalidarSesion/">http://localhost:4567/invalidarSesion/</a></li>
+                                        </ul>
+                                        </p>
 
-.class {
-  width: percentage(@width); // returns &#x60;50%&#x60;
-  color: saturate(@base, 5%);
-  background-color: spin(lighten(@base, 25%), 8);
-}</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
-                                <div id="javascript" class="section-block">
+                                <div id="plantillas" class="section-block">
                                     <div class="code-block">
-                                        <h6>JavaScript Code Example</h6>
-                                        <pre><code class="language-javascript">&lt;script&gt;
-    function myFunction(a, b) { 
-        return a * b; 
-    } 
-    
-    document.getElementById(&quot;demo&quot;).innerHTML = myFunction(4, 3); 
-&lt;/script&gt;</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="python" class="section-block">
-                                    <div class="code-block">
-                                        <h6>Python Code Example</h6>
-                                        <pre><code class="language-python">&gt;&gt;&gt; x = int(input(&quot;
-Please enter an integer: &quot;)) Please enter an integer: 42 
-&gt;&gt;&gt; if x &lt; 0: 
-... x = 0 
-... print('Negative changed to zero') 
-... elif x == 0: 
-... print('Zero') 
-... elif x == 1: 
-... print('Single') 
-... else: 
-... print('More') 
-... More</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="php" class="section-block">
-                                    <div class="code-block">
-                                        <h6>PHP Code Example</h6>
-                                        <pre><code class="language-php">&lt;?php
-$txt = &quot;Hello world!&quot;; 
-$x = 5; 
-$y = 10.5; 
+                                        <h6>Plantillas</h6>
+                                        <p>
+                                            Permiten trabajar con el modelo 2 de aplicaciones web,
+                                        estaremos utilizando Freemarker y Thymeleaf.
+                                        <ul>
+                                            <li>Formulario -> <a target="_blank" href="http://localhost:4567/formulario/">http://localhost:4567/formulario/</a></li>
+                                            <li>HTML y CSS -> <a target="_blank" href="http://localhost:4567/datosEstudiante/20011136">http://localhost:4567/datosEstudiante/20011136</a></li>
+                                            <li>Funcionalidades FreeMarker -> <a target="_blank" href="http://localhost:4567/funcionalidadFreemarker">http://localhost:4567/funcionalidadFreemarker</a></li>
+                                            <li>Funcionalidades Thymeleaf -> <a target="_blank" href="http://localhost:4567/thymeleaf/">http://localhost:4567/thymeleaf/</a></li>
+                                        </ul>
+                                        </p>
 
-echo $txt; 
-echo &quot;&lt;br&gt;&quot;; 
-echo $x; 
-echo &quot;&lt;br&gt;&quot;; 
-echo $y; 
-?&gt;</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
-                                <div id="handlebars" class="section-block">
+                                <div id="filtros" class="section-block">
                                     <div class="code-block">
-                                        <h6>Handlebars Code Example</h6>
-                                        <pre><code class="language-handlebars">Handlebars.registerHelper('list', function(items, options) {
-  var out = &quot;&lt;ul&gt;&quot;; 
-  
-  for(var i=0, l=items.length; i&lt;l; i++) { 
-    out = out + &quot;&lt;li&gt;&quot; + options.fn(items[i]) + &quot;&lt;/li&gt;&quot;; 
-  } 
-  
-  return out + &quot;&lt;/ul&gt;&quot;; 
-});</code></pre>
+                                        <h6>Filtros</h6>
+                                        <p>
+                                            Permiten interceptar las peticiones antes y después de procesar
+                                            una petición del protocolo HTTP.
+                                        <ul>
+                                            <li>Implementar Seguridad -> <a target="_blank" href="http://localhost:4567/zonaadmin/">localhost:4567/zonaadmin/</a></li>
+                                            <li>Autenticando Usuario -> <a target="_blank" href="http://localhost:4567/autenticar/barcamp/2014">http://localhost:4567/autenticar/barcamp/2014</a></li>
+                                        </ul>
+                                        </p>
+
                                     </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="excepciones" class="section-block">
                                     <div class="code-block">
-                                        <h6>Git Code Example</h6>
-                                        <pre><code class="language-git">$ git add Documentation.txt</code></pre>
+                                        <h6>Excepciones</h6>
+                                        <p>
+                                            Manejo de las excepciones y codigo de error del protoco HTTP.
+                                        <ul>
+                                            <li>Error de Conversión -> <a target="_blank" href="http://localhost:4567/errorConversion/kasdj">http://localhost:4567/errorConversion/kasdj</a></li>
+                                            <li>Otro Error -> <a target="_blank" href="http://localhost:4567/errorRuntime">http://localhost:4567/errorRuntime</a></li>
+                                            <li>Recurso no encontrado -> <a target="_blank" href="http://localhost:4567/no-existe-recurso">http://localhost:4567/no-existe-recurso</a></li>
+                                        </ul>
+                                        </p>
+
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="transformaciones" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Transformaciones</h6>
+                                        <p>
+                                            Permite convertir la salida dependiendo el tipo de datos solicitados por el cliente.
+                                        <ul>
+                                            <li>Sin conversión -> <a target="_blank" href="http://localhost:4567/estudianteJsonSimple/">http://localhost:4567/estudianteJsonSimple/</a></li>
+                                            <li>Conversión a JSON -> <a target="_blank" href="http://localhost:4567/estudianteJson/">http://localhost:4567/estudianteJson/</a></li>
+                                        </ul>
+                                        </p>
+
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="subir-archivos" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Subir Archivos</h6>
+                                        <p>
+                                            Subir archivo al servidor.
+                                        <ul>
+                                            <li>Subir Archivo -> <a target="_blank" href="localhost:4567/subir-archivo.html">localhost:4567/subir-archivo.html</a></li>
+                                        </ul>
+                                        </p>
+
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -269,14 +265,14 @@ echo $y;
                                     </nav><!--//nav-->
 	                                <a class="nav-link scrollto" href="#code-section">Funcionalidades</a>
                                     <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#html">Recibir Datos</a>
-                                        <a class="nav-link scrollto" href="#css">CSS</a>
-                                        <a class="nav-link scrollto" href="#sass">Sass</a>
-                                        <a class="nav-link scrollto" href="#less">LESS</a>
-                                        <a class="nav-link scrollto" href="#javascript">JavaScript</a>
-                                        <a class="nav-link scrollto" href="#python">Python</a>
-                                        <a class="nav-link scrollto" href="#php">PHP</a>
-                                        <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
+                                        <a class="nav-link scrollto" href="#datos">Aspectos Básicos y Recibir Datos</a>
+                                        <a class="nav-link scrollto" href="#cookies">Cookies</a>
+                                        <a class="nav-link scrollto" href="#sesiones">Sesiones</a>
+                                        <a class="nav-link scrollto" href="#plantillas">Plantillas</a>
+                                        <a class="nav-link scrollto" href="#filtros">Filtros</a>
+                                        <a class="nav-link scrollto" href="#excepciones">Excepciones</a>
+                                        <a class="nav-link scrollto" href="#transformaciones">Transformación</a>
+                                        <a class="nav-link scrollto" href="#subir-archivos">Subir Archivos</a>
                                     </nav><!--//nav-->
 	                            </nav><!--//doc-menu-->
 

@@ -13,10 +13,20 @@ public class TransformacionesControlador {
 
     public void ejemploTransformaciones(){
 
+        /**
+         * Trama sin convertir:
+         * http://localhost:4567/estudianteJsonSimple/
+         *
+         */
         get("/estudianteJsonSimple/", (request, response) -> {
             return new Estudiante(20011136, "Carlos Camacho", "ISC");
         });
 
+        /**
+         * Trama sin convertir:
+         * http://localhost:4567/estudianteJson/
+         *
+         */
         get("/estudianteJson/", (request, response) -> {
             return new Estudiante(20011136, "Carlos Camacho", "ISC");
         }, new JsonTransformer());

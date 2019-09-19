@@ -38,12 +38,16 @@ public class ExcepcionesControlador {
 
         /**
          * Ruta para probar el plugin para visualizar los errores:
-         * http://localhost:4567/errorRuntime
-         * La documentación:
-         * com.sparkjava:spark-debug-tools:0.5
+         * http://localhost:4567/errorRuntime         *
          */
         get("/errorRuntime", (request, response) -> {
             throw new RuntimeException("Error de ejecución...");
         });
+
+        /**
+         * Responde al error 404.
+         * http://localhost:4567/no-existe-recurso
+         */
+        notFound("<html><body><h1>Recurso no encontrado</h1></body></html>");
     }
 }
